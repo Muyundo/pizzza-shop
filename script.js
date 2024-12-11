@@ -1,33 +1,48 @@
-//empty cart
-let cart = []
+// Empty cart
+let cart = [];
 
-//add pizzasto the cart
-function addToCart(pizzaName, price){
-    //pizza object
+// Add pizzas to the cart
+function addToCart(pizzaName, price) {
+    // Create a pizza object
     const pizza = {
         name: pizzaName,
         price: price
-    }
+    };
 
-    //add to cart
-    cart.push(pizza)
+    // Add pizza to cart
+    cart.push(pizza);
 
-    //log updated cart to console
-    console.log(cart)
+    // Log updated cart to console
+    console.log(cart);
 
-     //update cart display
-
-       // updateCartDisplay()
-
+    // Update cart display
+    updateCartDisplay();
 }
 
-//event listenerto all addd to cart button
-const addToCartButton = document.querySelectorAll('.Add-to-Cart')
-addToCartButton.forEach(button =>{
-    button.addEventListener('click', (event) =>{
-        const pizzaName = event.target.getAttribute('data-pizza')
-        const pizzaPrice = event.target.getAttribute('data-price')
-        addToCart(pizzaName, pizzaPrice)
+function updateCartDisplay() {
+    const cartContainer = document.getElementById('cart');
+    cartContainer.innerHTML = '';  // Clear previous cart content
 
-    })
-})
+    // If cart is empty, display a message
+    if (cart.length === 0) {
+        cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+        // Display each item in the cart
+        cart.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('cart-item');
+            itemDiv.innerHTML = `${item.name} - Ksh. ${item.price}`;
+            cartContainer.appendChild(itemDiv);
+        });
+    }
+}
+
+// Event listener for all "Add to Cart" buttons
+const addToCartButton = document.querySelectorAll('.Add-to-Cart');
+addToCartButton.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const pizzaName = event.target.getAttribute('data-pizza');
+        const pizzaPrice = event.target.getAttribute('data-price');
+        addToCart(pizzaName, pizzaPrice);
+    });
+});

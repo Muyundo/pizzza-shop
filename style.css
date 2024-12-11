@@ -124,3 +124,33 @@ footer{
 footer p{
     margin: 0;
 }
+
+/*cart*/
+.cart{
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 2px solid #ddd;
+    border-radius: 5PX;
+
+}
+
+.cart h2{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+
+}
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#total-price {
+    font-weight: bold;
+    margin-top: 20px;
+}
