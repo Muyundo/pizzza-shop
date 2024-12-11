@@ -1,5 +1,5 @@
 // Empty cart
-let cart = [];
+/*let cart = [];
 
 // Add pizzas to the cart
 function addToCart(pizzaName, price) {
@@ -38,11 +38,11 @@ function updateCartDisplay() {
 }
 
 // Event listener for all "Add to Cart" buttons
-const addToCartButton = document.querySelectorAll('.Add-to-Cart');
+/*const addToCartButton = document.querySelectorAll('.add-to-cart');
 addToCartButton.forEach(button => {
     button.addEventListener('click', (event) => {
         const pizzaName = event.target.getAttribute('data-pizza');
         const pizzaPrice = event.target.getAttribute('data-price');
         addToCart(pizzaName, pizzaPrice);
     });
-});
+});*/

@@ -98,7 +98,7 @@ main{
 }
 
 /* Add to Cart Button Styling */
-.pizza-item .Add-to-Cart{
+.pizza-item .add-to-cart{
     background-color: #e74c3c;
     color: white;
     border: none;
@@ -108,7 +108,7 @@ main{
     cursor: pointer;
 }
 
-.pizza-item .Add-to-Cart:hover{
+.pizza-item .add-to-cart:hover{
     background-color: #c0392b;
 }
 
