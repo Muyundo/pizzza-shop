@@ -154,3 +154,25 @@ footer p{
     font-weight: bold;
     margin-top: 20px;
 }
+
+/*notification Styling*/
+.notification{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease; /* Smooth fade effect */
+    z-index: 1000;
+    font-weight: bold;
+}
+
+.notification.show{
+    visibility: visible;
+    opacity: 1;
+}
