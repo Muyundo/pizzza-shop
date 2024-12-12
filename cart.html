@@ -6,12 +6,33 @@
     <title>Your cart</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-   <div id="cart-container">
-    <h2>Your Cart</h2>
-   <div id="cart-items"></div>
-   <div id="total-price"></div>
-   </div> 
-   <script src="cart.js"></script>
+  <header>
+    <div class="logo">
+        <h1>Pizza Store</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</li>
+                <li><a href="#">Menu</li>
+                    <li><a href="cart.html" class="cart-menu">Cart</li>
+        </ul>
+    </nav>
+  </header> 
+  <main>
+    <section class="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div id="total-price">Total: Ksh. 0.00</div>
+        <div id="notification" class="notification"></div>
+
+    </section>
+  </main> 
+        <footer>
+        <p>&copy; 2024 pizza shop. All rights reserved</p>
+        </footer>
+        <script src="script.js"></script>  
+        <script src="cart.js"></script>  
 </body>
 </html>
