@@ -6,6 +6,9 @@ function updateCart() {
     const cartItemsContainer = document.getElementById('cart-items')
     const totalPriceElement = document.getElementById('total-price')
 
+    if (!cartItemsContainer ||  !totalPriceElement) {
+        return
+    }
     // Clear the existing cart items
     cartItemsContainer.innerHTML = '';
 
@@ -80,3 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateCart()
 }); 
+
+//toggle humberger
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle')
+    const navMenu = document.querySelector('nav ul')
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active')
+    })
+})

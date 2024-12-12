@@ -176,3 +176,69 @@ footer p{
     visibility: visible;
     opacity: 1;
 }
+
+/*Humberger menu icon*/
+.nav-toggle {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/*Responsive navigation menu*/
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /*hide the menu on smaller screens*/
+        flex-direction: column;
+        background-color: #e74c3c;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-toggle{
+        display: block; /* Show the hamburger button on smaller screens */
+    }
+}
+
+/*default nav styling for desktop*/
+nav ul {
+    display: flex;
+}
+
+/*Hide nav menu on smaller screens by default*/
+@media(max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #e74c3c;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+    .nav-toggle{
+        display: block;
+    }
+}
