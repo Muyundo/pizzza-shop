@@ -16,11 +16,14 @@ function updateCart() {
     for (let i = 0; i < cart1.length; i++) {
         const item = cart1[i];
         const itemElement = document.createElement('div')
-        itemElement.classList.add('cart-item');
+        itemElement.classList.add('cart-items');
         itemElement.innerHTML = `
-            ${item.name} - Ksh. ${item.price.toFixed(2)}
-            <button onclick="removeItemFromCart(${i})" class="remove-btn">Remove</button>
-        `;
+        <div class="cart-item-details">
+        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-price">Price: $${item.price}</div>
+        <button onclick="removeItemFromCart(${i})" class="remove-btn">Remove</button>
+        `
         cartItemsContainer.appendChild(itemElement)
     }
 
@@ -63,12 +66,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const button = event.target
 
         // Add error handling: Check if the button and attributes exist
-        if (button && button.hasAttribute('data-pizza') && button.hasAttribute('data-price')) {
+        if (button && button.hasAttribute('data-pizza') && 
+            button.hasAttribute('data-price') &&
+            button.hasAttribute('data-pizza-image')
+        ) {
             const pizzaName = button.getAttribute('data-pizza');
             const pizzaPrice = parseFloat(button.getAttribute('data-price'))
+            const pizzaImage = button.getAttribute('data-pizza-image')
 
             // Add pizza to the cart array
-            cart1.push({ name: pizzaName, price: pizzaPrice })
+            cart1.push({ name: pizzaName, price: pizzaPrice, image: pizzaImage })
 
            //save items to local Storage
             localStorage.setItem('cart', JSON.stringify(cart1))
