@@ -181,6 +181,27 @@ footer p{
     margin-bottom: 5px;
 }
 
+/* Style for the total price section */
+#total-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* padding and background color to make the total stand out */
+.cart-total-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
 /* Remove button styling */
 .remove-btn {
     background-color: #e74c3c;
